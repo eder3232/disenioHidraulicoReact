@@ -13,8 +13,6 @@ function App() {
     <div className="App">
       <CssBaseline />
       <AppRouter />
-      <Box sx={{ p: 2 }}>
-      </Box>
     </div>
   )
 }
