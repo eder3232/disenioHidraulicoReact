@@ -341,10 +341,10 @@ const SifonInvertido = () => {
             <Typography>Calculando las perdidas menores:</Typography>
             <BlockMath math="h_{locales}=K_i\cdot \frac{V^2}{2g} \cdot \left(\frac{angulo_{curva}}{90}\right)^2" />
             <Typography>Calculando el factor k de las curvas:</Typography>
-            <BlockMath math="k=0.131+1048 \cdot \frac{Radio_{tuberia}}{Radio_{curvatura}}" />
-            <BlockMath math={`k_1=0.131+1048 \\cdot \\frac{${diametro / 2}}{${radio1}}`} />
+            <BlockMath math="k=0.131+1.848 \cdot \left( \frac{Radio_{tuberia}}{Radio_{curvatura}} \right)^{3.5}" />
+            <BlockMath math={`k_1=0.131+1.848 \\cdot \\left( \\frac{${diametro / 2}}{${radio1}} \\right)^{3.5}`} />
             <BlockMath math={`k_1=${k1.toFixed(3)}`} />
-            <BlockMath math={`k_2=0.131+1048 \\cdot \\frac{${diametro / 2}}{${radio2}}`} />
+            <BlockMath math={`k_2=0.131+1.848 \\cdot \\left( \\frac{${diametro / 2}}{${radio2}}\\right)^{3.5}`} />
             <BlockMath math={`k_2=${k2.toFixed(3)}`} />
 
             <Typography>Para la curva 1:</Typography>
