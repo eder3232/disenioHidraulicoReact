@@ -175,74 +175,87 @@ const SifonInvertido = () => {
 
             <Box sx={{ mt: 2 }}>
                 <Box sx={{ mt: 2 }}>
-                    <TextField
-                        id="outlined-textarea"
-                        name="tramoA_string"
-                        type="number"
-                        value={tramoA_string}
-                        onChange={handleChange}
-                        label="tramo A"
-                        placeholder="tramo A"
-                    />
-                    <TextField
-                        id="outlined-textarea"
-                        name="tramoB_string"
-                        type="number"
-                        value={tramoB_string}
-                        onChange={handleChange}
-                        label="tramo B"
-                        placeholder="tramo B"
-                    />
-                    <TextField
-                        id="outlined-textarea"
-                        name="tramoC_string"
-                        type="number"
-                        value={tramoC_string}
-                        onChange={handleChange}
-                        label="tramo C"
-                        placeholder="tramo C"
-                    />
-                </Box>
-
-                <Box sx={{ mt: 2 }}>
-                    <TextField
-                        id="outlined-textarea"
-                        name="angCurva1_string"
-                        type="number"
-                        value={angCurva1_string}
-                        onChange={handleChange}
-                        label="angCurva 1"
-                        placeholder="angCurva 1"
-                    />
-                    <TextField
-                        id="outlined-textarea"
-                        name="radio1_string"
-                        type="number"
-                        value={radio1_string}
-                        onChange={handleChange}
-                        label="radio 1"
-                        placeholder="radio 1"
-                    />
+                    <Box sx={{ m: 1 }}>
+                        <TextField
+                            id="outlined-textarea"
+                            name="tramoA_string"
+                            type="number"
+                            value={tramoA_string}
+                            onChange={handleChange}
+                            label="tramo A"
+                            placeholder="tramo A"
+                        />
+                    </Box>
+                    <Box sx={{ m: 1 }}>
+                        <TextField
+                            id="outlined-textarea"
+                            name="tramoB_string"
+                            type="number"
+                            value={tramoB_string}
+                            onChange={handleChange}
+                            label="tramo B"
+                            placeholder="tramo B"
+                        />
+                    </Box>
+                    <Box sx={{ m: 1 }}>
+                        <TextField
+                            id="outlined-textarea"
+                            name="tramoC_string"
+                            type="number"
+                            value={tramoC_string}
+                            onChange={handleChange}
+                            label="tramo C"
+                            placeholder="tramo C"
+                        />
+                    </Box>
                 </Box>
                 <Box sx={{ mt: 2 }}>
-                    <TextField
-                        id="outlined-textarea"
-                        name="angCurva2_string"
-                        type="number"
-                        value={angCurva2_string}
-                        onChange={handleChange}
-                        label="angCurva 2"
-                        placeholder="tramo A"
-                    />
-                    <TextField
-                        id="outlined-textarea"
-                        name="radio2_string"
-                        type="number"
-                        value={radio2_string}
-                        onChange={handleChange}
-                        label="radio 2"
-                        placeholder="radio 2"
-                    />
+                    <Box sx={{ m: 1 }}>
+                        <TextField
+                            id="outlined-textarea"
+                            name="angCurva1_string"
+                            type="number"
+                            value={angCurva1_string}
+                            onChange={handleChange}
+                            label="angCurva 1"
+                            placeholder="angCurva 1"
+                        />
+                    </Box>
+                    <Box sx={{ m: 1 }}>
+                        <TextField
+                            id="outlined-textarea"
+                            name="radio1_string"
+                            type="number"
+                            value={radio1_string}
+                            onChange={handleChange}
+                            label="radio 1"
+                            placeholder="radio 1"
+                        />
+                    </Box>
+                </Box>
+                <Box sx={{ mt: 2 }}>
+                    <Box sx={{ m: 1 }}>
+                        <TextField
+                            id="outlined-textarea"
+                            name="angCurva2_string"
+                            type="number"
+                            value={angCurva2_string}
+                            onChange={handleChange}
+                            label="angCurva 2"
+                            placeholder="tramo A"
+                        />
+                    </Box>
+                    <Box sx={{ m: 1 }}>
+                        <TextField
+                            id="outlined-textarea"
+                            name="radio2_string"
+                            type="number"
+                            value={radio2_string}
+                            onChange={handleChange}
+                            label="radio 2"
+                            placeholder="radio 2"
+                        />
+                    </Box>
                 </Box>
             </Box>
 
@@ -255,28 +268,32 @@ const SifonInvertido = () => {
             <BlockMath math="Q=V*A" />
             <BlockMath math="V=\frac{Q}{A}" />
 
-            <TextField
-                id="outlined-textarea"
-                name="caudal_string"
-                type="number"
-                value={caudal_string}
-                onChange={handleChange}
-                label="caudal(m3/s)"
-                placeholder="caudal(m3/s)"
-            />
-            <TextField
-                id="standard-number"
-                name="diametro_string"
-                type="number"
-                value={diametro_string}
-                onChange={handleChange}
-                label="diametro(m)"
-                placeholder="diametro(m)"
-            // InputLabelProps={{
-            //     shrink: true,
-            // }}
-            // variant="standard"
-            />
+            <Box sx={{ m: 1 }}>
+                <TextField
+                    id="outlined-textarea"
+                    name="caudal_string"
+                    type="number"
+                    value={caudal_string}
+                    onChange={handleChange}
+                    label="caudal(m3/s)"
+                    placeholder="caudal(m3/s)"
+                />
+            </Box>
+            <Box sx={{ m: 1 }}>
+                <TextField
+                    id="standard-number"
+                    name="diametro_string"
+                    type="number"
+                    value={diametro_string}
+                    onChange={handleChange}
+                    label="diametro(m)"
+                    placeholder="diametro(m)"
+                // InputLabelProps={{
+                //     shrink: true,
+                // }}
+                // variant="standard"
+                />
+            </Box>
 
 
             <BlockMath math={`A=\\pi \\times \\frac{${diametro}^{2}}{4}`} />
@@ -289,28 +306,32 @@ const SifonInvertido = () => {
             <Box
                 sx={{ mt: 2 }}
             >
-                <TextField
-                    id="outlined-textarea"
-                    name="viscosidad_string"
-                    type="number"
-                    value={viscosidad_string}
-                    onChange={handleChange}
-                    label="viscosidadCinematica(m^2/s)"
-                    placeholder="viscosidadCinematica(m^2/s)"
-                />
+                <Box sx={{ m: 1 }}>
+                    <TextField
+                        id="outlined-textarea"
+                        name="viscosidad_string"
+                        type="number"
+                        value={viscosidad_string}
+                        onChange={handleChange}
+                        label="viscosidadCinematica(m^2/s)"
+                        placeholder="viscosidadCinematica(m^2/s)"
+                    />
+                </Box>
                 <BlockMath math="Re= \frac{V \times d}{\nu}" />
                 <BlockMath math={`Re= ${reynolds.toFixed(3)}`} />
             </Box>
 
-            <TextField
-                id="outlined-textarea"
-                name="rugosidadAbs_string"
-                type="number"
-                value={rugosidadAbs_string}
-                onChange={handleChange}
-                label="rugosidadAbs(m)"
-                placeholder="rugosidadAbs(m)"
-            />
+            <Box sx={{ m: 1 }}>
+                <TextField
+                    id="outlined-textarea"
+                    name="rugosidadAbs_string"
+                    type="number"
+                    value={rugosidadAbs_string}
+                    onChange={handleChange}
+                    label="rugosidadAbs(m)"
+                    placeholder="rugosidadAbs(m)"
+                />
+            </Box>
 
             <FactorFriccion k={rugosidadAbs} d={diametro} Re={reynolds} setFriccion={setFriccion} />
             <BlockMath math="h_{friccion}=f\cdot {\frac {L}{D}}\cdot {\frac {V^{2}}{2g}}" />
@@ -340,7 +361,7 @@ const SifonInvertido = () => {
             <BlockMath math={`h_{total}=${(perdidasFriccion + local1 + local2).toFixed(3)}m`} />
             <BlockMath math="\Delta z  = h_t" />
             <BlockMath math={`\\Delta z=${(perdidasFriccion + local1 + local2).toFixed(3)}m`} />
-        </Box>
+        </Box >
     )
 }
 

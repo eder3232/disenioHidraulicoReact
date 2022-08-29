@@ -19,7 +19,7 @@ import { InlineMath, BlockMath } from 'react-katex'
 import { keyframes } from 'styled-components';
 
 const FactorFriccionPage = () => {
-    const [stateString, setStateString] = useState({ k_string: 0.0013, d_string: "1.5", Re_string: "3706665" })
+    const [stateString, setStateString] = useState({ k_string: "0.0015", d_string: "1.5", Re_string: "3706665" })
     const { k_string, d_string, Re_string } = stateString
     let stateNumber = {}
     for (let prop in stateString) {
@@ -27,7 +27,7 @@ const FactorFriccionPage = () => {
     }
 
     function handleChange(event) {
-        setSifon((prevState) => ({
+        setStateString((prevState) => ({
             ...prevState,
             [event.target.name]: event.target.value
         }))
@@ -69,40 +69,51 @@ const FactorFriccionPage = () => {
     return (
         <Box sx={{ m: 2 }}>
             <Typography variant="h4">Factor de fricción</Typography>
+            <Box sx={{ m: 2 }}>
 
-            <TextField
-                id="outlined-textarea"
-                name="k_string"
-                type="number"
-                value={k_string}
-                onChange={handleChange}
-                label="k"
-                placeholder="k"
-            />
-            <TextField
-                id="outlined-textarea"
-                name="d_string"
-                type="number"
-                value={d_string}
-                onChange={handleChange}
-                label="d"
-                placeholder="d"
-            />
-            <TextField
-                id="outlined-textarea"
-                name="Re_string"
-                type="number"
-                value={Re_string}
-                onChange={handleChange}
-                label="Re"
-                placeholder="Re"
-            />
+                <Box sx={{ m: 1 }}>
+                    <TextField
+                        id="outlined-textarea"
+                        name="k_string"
+                        type="number"
+                        value={k_string}
+                        onChange={handleChange}
+                        label="k"
+                        placeholder="k"
+                    />
+                </Box>
+
+                <Box sx={{ m: 1 }}>
+                    <TextField
+                        id="outlined-textarea"
+                        name="d_string"
+                        type="number"
+                        value={d_string}
+                        onChange={handleChange}
+                        label="d"
+                        placeholder="d"
+                    />
+                </Box>
+
+                <Box sx={{ m: 1 }}>
+                    <TextField
+                        id="outlined-textarea"
+                        name="Re_string"
+                        type="number"
+                        value={Re_string}
+                        onChange={handleChange}
+                        label="Re"
+                        placeholder="Re"
+                    />
+                </Box>
+
+            </Box>
             {case1 && (
                 <BlockMath math={`f= ${solution}`} />
             )}
 
             {!case1 && (
-                <Box>
+                <Box sx={{ m: 2 }}>
                     <TableContainer component={Paper}>
                         <Table sx={{ minWidth: 650 }} size="small" aria-label="a dense table">
                             <TableHead>
@@ -130,7 +141,10 @@ const FactorFriccionPage = () => {
                             </TableBody>
                         </Table>
                     </TableContainer>
-                    <BlockMath math={`f= ${solution}`} /></Box>
+                    <Box sx={{ m: 4 }}>
+                        <BlockMath math={`f= ${solution}`} />
+                    </Box>
+                </Box>
             )}
         </Box>
     )

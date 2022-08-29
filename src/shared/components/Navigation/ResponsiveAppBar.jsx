@@ -1,55 +1,57 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
-import EngineeringIcon from '@mui/icons-material/Engineering';
+import * as React from 'react'
+import AppBar from '@mui/material/AppBar'
+import Box from '@mui/material/Box'
+import Toolbar from '@mui/material/Toolbar'
+import IconButton from '@mui/material/IconButton'
+import Typography from '@mui/material/Typography'
+import Menu from '@mui/material/Menu'
+import MenuIcon from '@mui/icons-material/Menu'
+import Container from '@mui/material/Container'
+import Avatar from '@mui/material/Avatar'
+import Button from '@mui/material/Button'
+import Tooltip from '@mui/material/Tooltip'
+import MenuItem from '@mui/material/MenuItem'
+import AdbIcon from '@mui/icons-material/Adb'
+import EngineeringIcon from '@mui/icons-material/Engineering'
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
 
-import SifonInvertido from '../../../content/sifonInvertido/pages/SifonInvertido';
-import FactorFriccionPage from '../../../content/sifonInvertido/pages/FactorFriccionPage';
+import SifonInvertido from '../../../content/sifonInvertido/pages/SifonInvertido'
+import FactorFriccionPage from '../../../content/sifonInvertido/pages/FactorFriccionPage'
 // const pages = ['Products', 'Pricing', 'Blog'];
 
-const pages = ['sifon', 'friccion',];
+const pages = ['sifon', 'friccion']
 // const pages = [{ title: 'friccion', com: FactorFriccionPage }]
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 
 const ResponsiveAppBar = () => {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
+    const [anchorElNav, setAnchorElNav] = React.useState(null)
+    const [anchorElUser, setAnchorElUser] = React.useState(null)
 
     const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
+        setAnchorElNav(event.currentTarget)
+    }
     const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
+        setAnchorElUser(event.currentTarget)
+    }
 
     const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
+        setAnchorElNav(null)
+    }
 
     const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
+        setAnchorElUser(null)
+    }
 
     return (
         <AppBar position="static">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     {/* Icono y logo en web */}
-                    <EngineeringIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-                    <Link to="/" >
+                    <EngineeringIcon
+                        sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}
+                    />
+                    <Link to="/" style={{ textDecoration: 'none' }}>
                         <Typography
                             variant="h6"
                             noWrap
@@ -99,13 +101,20 @@ const ResponsiveAppBar = () => {
                         >
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center"><Link to={page}>{page}</Link></Typography>
+                                    <Typography textAlign="center">
+                                        <Link to={page} style={{ textDecoration: 'none' }}>
+                                            {page}
+                                        </Link>
+                                    </Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
                     </Box>
                     {/* Icono y lobo en mobile */}
-                    <EngineeringIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /><Link to="/">
+                    <EngineeringIcon
+                        sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }}
+                    />
+                    <Link to="/" style={{ textDecoration: 'none' }}>
                         <Typography
                             variant="h5"
                             noWrap
@@ -118,16 +127,17 @@ const ResponsiveAppBar = () => {
                                 fontFamily: 'monospace',
                                 fontWeight: 700,
                                 letterSpacing: '.3rem',
-                                color: 'inherit',
+                                color: 'white',
                                 textDecoration: 'none',
                             }}
                         >
                             eder^
-                        </Typography></Link>
+                        </Typography>
+                    </Link>
                     {/* Pages en web*/}
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
-                            <Link to={page}>
+                            <Link to={page} style={{ textDecoration: 'none' }} key={page}>
                                 <Button
                                     key={page}
                                     onClick={handleCloseNavMenu}
@@ -171,6 +181,6 @@ const ResponsiveAppBar = () => {
                 </Toolbar>
             </Container>
         </AppBar>
-    );
-};
-export default ResponsiveAppBar;
+    )
+}
+export default ResponsiveAppBar

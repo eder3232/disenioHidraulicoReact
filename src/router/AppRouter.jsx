@@ -13,16 +13,17 @@ const AppRouter = () => {
         <div>
             <ResponsiveAppBar />
             <Routes>
-                <Route path="/disenioHidraulicoReact" element={<SifonInvertido />}>
-                    {/* <Route index element={<Home />} /> */}
+                <Route path="/" element={<SifonInvertido />}>
+
                     {/* <Route path="teams" element={<Teams />}>
                             <Route path=":teamId" element={<Team />} />
                             <Route path="new" element={<NewTeamForm />} />
                             <Route index element={<LeagueStandings />} />
                         </Route> */}
-                    <Route path="/friccion" element={<FactorFriccionPage />} />
-                    <Route path="/sifon" element={<SifonInvertido />} />
+
                 </Route>
+                <Route path="/friccion" element={<FactorFriccionPage />} />
+                <Route path="/sifon" element={<SifonInvertido />} />
 
             </Routes>
         </div>
