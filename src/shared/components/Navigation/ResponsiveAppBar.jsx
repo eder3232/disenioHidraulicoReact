@@ -20,7 +20,7 @@ import SifonInvertido from '../../../content/sifonInvertido/pages/SifonInvertido
 import FactorFriccionPage from '../../../content/sifonInvertido/pages/FactorFriccionPage'
 // const pages = ['Products', 'Pricing', 'Blog'];
 
-const pages = ['sifon', 'friccion']
+const pages = ['sifon', 'friccion', 'caidas_formulario']
 // const pages = [{ title: 'friccion', com: FactorFriccionPage }]
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout']
 

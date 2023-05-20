@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Route, Routes } from 'react-router-dom'
 import App from '../App'
+import FormularioCaidasPage from '../content/caidas/pages/FormularioCaidasPage'
 import FactorFriccionPage from '../content/sifonInvertido/pages/FactorFriccionPage'
 import SifonInvertido from '../content/sifonInvertido/pages/SifonInvertido'
 // import Home from '../Home'
@@ -22,8 +23,10 @@ const AppRouter = () => {
                         </Route> */}
 
                 </Route>
-                <Route path="/friccion" element={<FactorFriccionPage />} />
-                <Route path="/sifon" element={<SifonInvertido />} />
+                {/* <Route path="friccion/:params" element={<FactorFriccionPage />} /> */}
+                <Route path="friccion" element={<FactorFriccionPage />} />
+                <Route path="sifon" element={<SifonInvertido />} />
+                <Route path="caidas_formulario" element={<FormularioCaidasPage />} />
 
             </Routes>
         </div>

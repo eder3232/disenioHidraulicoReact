@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+
+import { useSearchParams } from 'react-router-dom'
 
 import { log10, log, abs } from 'mathjs'
 
@@ -19,7 +21,18 @@ import { InlineMath, BlockMath } from 'react-katex'
 import { keyframes } from 'styled-components';
 
 const FactorFriccionPage = () => {
-    const [stateString, setStateString] = useState({ k_string: "0.0015", d_string: "1.5", Re_string: "3706665" })
+    let existPreviousData = false
+    let [searchParams, setSearchParams] = useSearchParams()
+    let data = { k: searchParams.get('k'), d: searchParams.get('d'), Re: searchParams.get('Re') }
+    console.log(searchParams)
+    if (data.k && data.d && data.Re) existPreviousData = true
+    let initialData = { k_string: "0.0015", d_string: "1.5", Re_string: "3706665" }
+    if (existPreviousData) {
+        initialData = { k_string: data.k, d_string: data.d, Re_string: data.Re }
+    }
+    console.log(data)
+
+    const [stateString, setStateString] = useState(initialData)
     const { k_string, d_string, Re_string } = stateString
     let stateNumber = {}
     for (let prop in stateString) {
@@ -64,7 +77,12 @@ const FactorFriccionPage = () => {
         solution = 1 / next ** 2
     }
 
-
+    useEffect(() => {
+        searchParams.set('k', k_string)
+        searchParams.set('d', d_string)
+        searchParams.set('Re', Re_string)
+        setSearchParams(searchParams)
+    }, [k, d, Re])
 
     return (
         <Box sx={{ m: 2 }}>
